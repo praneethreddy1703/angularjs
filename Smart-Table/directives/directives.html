@@ -1,0 +1,10 @@
+<table border="1px solid" class="table table-striped bg-success" >
+	<tr class="text-mine" >
+		<th>firstname</th>
+		<th>lastname</th>
+	</tr>
+	<tr class="text-info" ng-repeat="my in myData |filter:send " >
+		<td>{{my.firstname}}</td>
+		<td>{{my.lastname}}</td>
+	</tr>
+</table>

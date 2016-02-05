@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<link rel="stylesheet" type="css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<head></head>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular/angular-sanitize.min.js"></script>
+	<script src="ng-csv-0.3.6/build/ng-csv.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<body class="bg-info">
+		<div ng-controller="mainController">
+			<nav class="navbar  bg-danger"></nav>
+   			<div class="container" >	
+    			<span class="text-mine" style="margin-left:28px">First Name:</span><input class="form-control-static" type="text" ng-model="fname" />
+    			<span class="text-mine">Last Name:</span><input class="form-control-static"  type="text" ng-model="lname" />
+    			<button class="btn btn-primary" ng-click="add()">Add</button>
+    			<div class="input-group">
+    				<input type="text" class="form-control " placeholder="Search" ng-model="send" aria-describedby="basic-addon1" />
+    				<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span></div><br/>
+				<a href="#page" data-toggle="modal" class="btn btn-primary">Export</a><br><br>	
+				<display></display>
+				
+			</div>
+		
+		<div class='modal fade' id="page" role="dialog">
+			<div class="modal-dialog">
+            	<div class="modal-content">
+                	<div class="modal-header bg-info">
+                 		<h4>Export</h4>
+					</div>
+					<div class="modal-body ">
+						<input type="text" class="form-control-static" ng-model="fileName" placeholder="Enter Filename">
+						<input type="text" class="form-control-static" ng-model="userName" placeholder="Enter Username">
+						<input type="password" class="form-control-static" ng-model="password" placeholder="Enter Password">
+						<p id="checked"></p>
+					</div>
+					<div class="modal-footer  bg-info">
+						<button class="btn btn-success" ng-click="check(userName,password)">Ok</button>
+						<input type="button" class="btn btn-primary" ng-csv="myData" csv-header="getHeader()" filename="{{fileName}}.csv"  value="Export" ng-if="a != 0">
+						<a class="btn btn-danger" data-dismiss="modal" ng-click="close()">Close</a>
+						
+            	</div>
+        	</div>
+        </div>
+    </div>
+    </div>
+
+	</body>
+</html>
+

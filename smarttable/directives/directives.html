@@ -1,0 +1,15 @@
+<table st-table="myContent" st-safe-src="myData" border="1px solid" class="table table-striped bg-success" >
+	<tr class="text-mine" >
+		<th st-sort="firstName"><a>firstname</a></th>
+		<th>lastname</th>
+	</tr>
+	<tr ng-repeat="my in myContent |filter:send " >
+		<td>{{my.firstName}}</td>
+		<td>{{my.lastName}}</td>
+	</tr>
+	<tr class="text-info">
+				<td colspan="5" class="text-center">
+					<div st-pagination="" st-items-by-page="8" st-displayed-pages="7"></div>
+				</td>
+			</tr>
+</table>

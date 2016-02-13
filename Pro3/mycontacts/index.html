@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Contacts</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+</head>
+<body>
+    <div class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>My Contacts</h1>
+                </div>
+                <div style="text-align:right;font-size:20px">
+                    <p class="margin"><a href="#/">Home</a></p>
+                </div>
+            </div> 
+        </div>
+    </div>
+  <div class="container">
+    <div ng-view></div>
+      
+</div>
+    <script src="jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="mycontacts.js"></script>
+    <!--script src="bower_components/foundation/js/foundation.js"></script-->
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    
+    
+</html>
